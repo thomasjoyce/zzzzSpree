@@ -7,6 +7,18 @@ gem 'rails', '3.0.5'
 
 gem 'pg'
 
+# To get a specific commit version on spree github use :ref 
+# gem 'spree', :git => 'git://github.com/spree/spree.git', :ref => 'a24b44aed6675866fb0e'
+
+## AntZoom version of own core spree gems personalize
+gem 'spree',        '0.50.99', :path => 'spree_SourceCodes'
+gem 'spree_api',    '0.50.99', :path => 'spree_SourceCodes/api'
+gem 'spree_auth',   '0.50.99', :path => 'spree_SourceCodes/auth'
+gem 'spree_core',   '0.50.99', :path => 'spree_SourceCodes/core'
+gem 'spree_dash',   '0.50.99', :path => 'spree_SourceCodes/dash'
+gem 'spree_promo',  '0.50.99', :path => 'spree_SourceCodes/promo'
+gem 'spree_sample', '0.50.99', :path => 'spree_SourceCodes/sample'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
