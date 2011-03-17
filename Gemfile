@@ -5,7 +5,12 @@ gem 'rails', '3.0.5'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+# Gems - development only
+group :development do
+  gem 'passenger', '3.0.5'
+  gem 'pg'
+end
+
 
 # To get a specific commit version on spree github use :ref 
 # gem 'spree', :git => 'git://github.com/spree/spree.git', :ref => 'a24b44aed6675866fb0e'
