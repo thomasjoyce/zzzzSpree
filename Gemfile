@@ -13,6 +13,7 @@ end
 
 # Production Heroku Gems
 gem 'heroku'
+gem 'taps'
 
 # To get a specific commit version on spree github use :ref 
 # gem 'spree', :git => 'git://github.com/spree/spree.git', :ref => 'a24b44aed6675866fb0e'
