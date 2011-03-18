@@ -15,6 +15,10 @@ end
 gem 'heroku'
 gem 'taps'
 
+# Get Spree to work in Heroku & store on Amazon S3.
+gem 'spree_heroku', '1.0.0', :git => 'git://github.com/paxer/spree-heroku.git'
+gem 'aws-s3'
+
 # To get a specific commit version on spree github use :ref 
 # gem 'spree', :git => 'git://github.com/spree/spree.git', :ref => 'a24b44aed6675866fb0e'
 
