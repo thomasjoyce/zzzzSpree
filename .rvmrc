@@ -43,3 +43,11 @@ fi
     # Bundle while reducing excess noise.
     printf "Bundling your gems this may take a few minutes on a fresh clone.\n"
     bundle | grep -v 'Using' | grep -v 'complete' | sed '/^$/d'
+    
+    # If heroku deployment to prod is not setup, create it
+    if  ! git remote -v | grep -v 'heroku' ; then 
+        printf "Creating: heroku git@heroku.com:ants.git for heroku prod.\n"
+        git remote add heroku git@heroku.com:ants.git
+    else
+        printf "Remote git@heroku.com:ants.git heroku already exists.\n"
+    fi
