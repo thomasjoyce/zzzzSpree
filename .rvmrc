@@ -45,7 +45,7 @@ fi
     bundle | grep -v 'Using' | grep -v 'complete' | sed '/^$/d'
     
     # If heroku deployment to prod is not setup, create it
-    if  ! git remote -v | grep -v 'heroku' ; then 
+    if  ! git remote -v | grep 'heroku' ; then 
         printf "Creating: heroku git@heroku.com:ants.git for heroku prod.\n"
         git remote add heroku git@heroku.com:ants.git
     else
