@@ -22,5 +22,9 @@ JesusSpree::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  # Turn on logging (default is :debug) or :info
+  config.log_level = :debug
+    
 end
 
