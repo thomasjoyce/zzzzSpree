@@ -9,12 +9,18 @@ Rails.application.routes.draw do
   end
 
   namespace :api do
+    
+    resources :users, :except => [] do
+      put :event, :on => :member
+    end
+  
     resources :shipments, :except => [:new,:edit] do
       put :event, :on => :member
       resources :inventory_units, :except => [:new,:edit] do
         put :event, :on => :member
       end
     end
+    
     resources :orders, :except => [:new,:edit] do
       put :event, :on => :member
       resources :shipments, :except => [:new,:edit]
@@ -23,14 +29,19 @@ Rails.application.routes.draw do
         put :event, :on => :member
       end
     end
+    
     resources :inventory_units, :except => [:new,:edit] do
       put :event, :on => :member
     end
+    
     resources :products, :except => [:new,:edit]
+    
     resources :countries, :except => [:new,:edit] do
       resources :states, :except => [:new,:edit]
     end
+    
     resources :states, :except => [:new,:edit]
+    
   end
 
 end
