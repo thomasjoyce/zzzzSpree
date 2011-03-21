@@ -46,8 +46,11 @@ fi
     
     # If heroku deployment to prod is not setup, create it
     if  ! git remote -v | grep 'heroku' ; then 
-        printf "Creating: heroku git@heroku.com:ants.git for heroku prod.\n"
-        git remote add heroku git@heroku.com:ants.git
+        printf "Creating Heroku configuration deployment" 
+        printf "Creating PROD remote: heroku git@heroku.com:ants.git\n"
+        git remote add production git@heroku.com:ants.git
+        printf "Creating Pre-PROD remote: heroku git@heroku.com:ants-staging.git\n"
+        git remote add staging git@heroku.com:ants-staging.git
     else
         printf "Remote git@heroku.com:ants.git heroku already exists.\n"
     fi
