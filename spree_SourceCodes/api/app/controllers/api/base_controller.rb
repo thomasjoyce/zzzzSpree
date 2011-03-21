@@ -15,7 +15,12 @@ class Api::BaseController < Spree::BaseController
     end
 
     create do
-      wants.json { render :text => "Resource created\n", :status => 201, :location => object_url }
+      # Debugging purpose
+      # Rails.logger.debug "API JSON Create trigger"
+
+      ## Return the object that was created [Example: user object return for new user registration]
+      wants.json { render :json => object.to_json(object_serialization_options), :status => 201, :location => object_url }
+     
       failure.wants.json { render :text => "Failure\n", :status => 500 }
     end
 

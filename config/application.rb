@@ -41,5 +41,8 @@ module JesusSpree
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    # See http://docs.heroku.com/logging#writing-to-your-log
+    config.action_controller.logger = Logger.new(STDOUT)
   end
 end
