@@ -1,6 +1,6 @@
 Introduction. [MASTER BRANCH]
 =========================
-JesusSpree project is a project that help community to access deals around it's local destination. 
+JesusSpree project is a project that help community to access deals around it's local destination using the iphone.
 
 Design
 -------------------------
