@@ -22,14 +22,30 @@ gem 'aws-s3'
 # To get a specific commit version on spree github use :ref 
 # gem 'spree', :git => 'git://github.com/spree/spree.git', :ref => 'a24b44aed6675866fb0e'
 
-## AntZoom version of own core spree gems personalize
-gem 'spree',        '0.50.99', :path => 'spree_SourceCodes'
-gem 'spree_api',    '0.50.99', :path => 'spree_SourceCodes/api'
-gem 'spree_auth',   '0.50.99', :path => 'spree_SourceCodes/auth'
-gem 'spree_core',   '0.50.99', :path => 'spree_SourceCodes/core'
-gem 'spree_dash',   '0.50.99', :path => 'spree_SourceCodes/dash'
-gem 'spree_promo',  '0.50.99', :path => 'spree_SourceCodes/promo'
-gem 'spree_sample', '0.50.99', :path => 'spree_SourceCodes/sample'
+## Current bundler does not like same gem listed on 2 different sources. 
+#  [ ie. group :development do xgem, '0.50.99', :path => '/Users/tomtom/workplace-antzoom/antzoom/SpreeCore' end  
+#      group :production do  xgem, :git => 'git@github.com:me/xgem.git' end ]
+## Bundler 1.1 will have it but for now, use this hack instead.
+# http://www.cowboycoded.com/2010/08/10/using-2-sources-for-a-gem-in-different-environments-with-bundler
+if ENV['MY_BUNDLE_ENV'] == "dev"
+    ## DEVO AntZoom version of own core spree gems personalize
+    gem 'spree',        '0.50.99', :path => '/Users/tomtom/workplace-antzoom/antzoom/SpreeCore'
+    gem 'spree_api',    '0.50.99', :path => '/Users/tomtom/workplace-antzoom/antzoom/SpreeCore/api'
+    gem 'spree_auth',   '0.50.99', :path => '/Users/tomtom/workplace-antzoom/antzoom/SpreeCore/auth'
+    gem 'spree_core',   '0.50.99', :path => '/Users/tomtom/workplace-antzoom/antzoom/SpreeCore/core'
+    gem 'spree_dash',   '0.50.99', :path => '/Users/tomtom/workplace-antzoom/antzoom/SpreeCore/dash'
+    gem 'spree_promo',  '0.50.99', :path => '/Users/tomtom/workplace-antzoom/antzoom/SpreeCore/promo'
+    gem 'spree_sample', '0.50.99', :path => '/Users/tomtom/workplace-antzoom/antzoom/SpreeCore/sample'
+else
+    ## PRODUCTION AntZoom version of own core spree gems personalize
+    gem 'spree',        '0.50.99', :path => 'spree_SourceCodes'
+    gem 'spree_api',    '0.50.99', :path => 'spree_SourceCodes/api'
+    gem 'spree_auth',   '0.50.99', :path => 'spree_SourceCodes/auth'
+    gem 'spree_core',   '0.50.99', :path => 'spree_SourceCodes/core'
+    gem 'spree_dash',   '0.50.99', :path => 'spree_SourceCodes/dash'
+    gem 'spree_promo',  '0.50.99', :path => 'spree_SourceCodes/promo'
+    gem 'spree_sample', '0.50.99', :path => 'spree_SourceCodes/sample'
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'
