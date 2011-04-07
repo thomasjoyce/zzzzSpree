@@ -1,9 +1,15 @@
-Introduction. [MASTER BRANCH]
+Introduction. [BRANCH rests-api-extensions]
 =========================
 JesusSpree project is a project that help community to access deals around it's local destination using the iphone.
 
 Design
 -------------------------
+jesusMobile [Frontend-mobile]
+    - mostly iphone UI interactions
+SpreeCore  [Pure Spree API's Core 0-50-stable branch]
+    - the gut of spree core api's - mainly RESTS api's
+JesusSpree [Backend extension server]
+    - business extensions for website 
 
 Dependencies
 -------------------------
