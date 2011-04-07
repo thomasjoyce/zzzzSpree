@@ -1,4 +1,4 @@
-Introduction. [BRANCH rests-api-extensions]
+Introduction. [BRANCH master]
 =========================
 JesusSpree project is a project that help community to access deals around it's local destination using the iphone.
 
