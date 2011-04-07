@@ -38,7 +38,13 @@ if ENV['MY_BUNDLE_ENV'] == "dev"
     gem 'spree_sample', '0.50.99', :path => '/Users/tomtom/workplace-antzoom/antzoom/SpreeCore/sample'
 else
     ## PRODUCTION AntZoom version of own core spree gems personalize
-    gem 'spree', '0.50.99',  :git => 'git://github.com/thomasjoyce/spree.git', :branch => 'RESTS'
+    gem 'spree',        '0.50.99',  :git => 'git://github.com/thomasjoyce/spree.git', :branch => 'RESTS'
+    gem 'spree_api',    '0.50.99',  :git => 'git://github.com/thomasjoyce/spree.git', :branch => 'RESTS'
+    gem 'spree_auth',   '0.50.99',  :git => 'git://github.com/thomasjoyce/spree.git', :branch => 'RESTS'
+    gem 'spree_core',   '0.50.99',  :git => 'git://github.com/thomasjoyce/spree.git', :branch => 'RESTS'
+    gem 'spree_dash',   '0.50.99',  :git => 'git://github.com/thomasjoyce/spree.git', :branch => 'RESTS'
+    gem 'spree_promo',  '0.50.99',  :git => 'git://github.com/thomasjoyce/spree.git', :branch => 'RESTS'
+    gem 'spree_sample', '0.50.99',  :git => 'git://github.com/thomasjoyce/spree.git', :branch => 'RESTS'
 end
 
 # Use unicorn as the web server
