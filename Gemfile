@@ -73,3 +73,4 @@ end
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem "antzoom_deal_content", :path => "vendor/extensions/antzoom_deal_content", :require => "antzoom_deal_content"

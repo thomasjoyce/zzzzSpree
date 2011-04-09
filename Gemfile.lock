@@ -68,6 +68,12 @@ PATH
       spree_core (= 0.50.99)
 
 PATH
+  remote: vendor/extensions/antzoom_deal_content
+  specs:
+    antzoom_deal_content (0.50.99)
+      spree_core (>= 0.50.99)
+
+PATH
   remote: vendor/extensions/spree_address_book
   specs:
     spree_address_book (0.50.0)
@@ -220,6 +226,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  antzoom_deal_content!
   aws-s3
   heroku
   passenger (= 3.0.5)
