@@ -32,12 +32,12 @@ ARGV.each do|myParameter|
                                                                                                     }
 
      when "test_showallusers" then
-           response = RestClient.get "http://G-pg8mRY4D6He8nfcCBt@localhost:3000/api/users.json", {:accept => :json}
+           response = RestClient.get "http://Sr7q3uUpxuxLhsB9Sivx@localhost:8888/api/users.json", {:accept => :json}
      when "test_showauser" then 
-            response = RestClient.get "http://3CaSUDIdl0oCUAOYMVh-@localhost:3000/api/users/50.json", {:accept => :json}
+            response = RestClient.get "http://Sr7q3uUpxuxLhsB9Sivx@localhost:8888/api/users/50.json", {:accept => :json}
 
      when "test_loginuser" then
-            response = RestClient.post 'http://G-pg8mRY4D6He8nfcCBt@localhost:3000/api/login.json', :commit => 'Log In',
+            response = RestClient.post 'http://Sr7q3uUpxuxLhsB9Sivx@localhost:8888/api/login.json', :commit => 'Log In',
                                                                                                     :authenticity_token => 'W74fV0OOr4a764ms//SYMzqtuKnZ7u0P3oidJ3kGGVI=',
                                                                                                     :user   => { 
                                                                                                                  :email       => 'updateburden@dog.com', 
@@ -47,20 +47,20 @@ ARGV.each do|myParameter|
 
     # curl -X POST -u G-pg8mRY4D6He8nfcCBt:x -d '{"user":{"email":"helpisontheway@hotmail.com","password":"password","password_confirmation":"password"},"commit":"Create"}' http://localhost:3000/api/users.json -H "Content-Type:application/json"
      when "test_createuser" then
-            response =RestClient.post 'http://G-pg8mRY4D6He8nfcCBt@localhost:3000/api/users.json', :commit => 'Create',
+            response =RestClient.post 'http://Sr7q3uUpxuxLhsB9Sivx@localhost:8888/api/users.json', :commit => 'Create',
                                                                                                    :user   => { 
                                                                                                         :email                 => 'twoxxxxburden@dog.com', 
                                                                                                         :password              => 'dog123', 
                                                                                                         :password_confirmation => 'dog123'
                                                                                                    }
      when "test_updateuser" then 
-           response =RestClient.put 'http://G-pg8mRY4D6He8nfcCBt@localhost:3000/api/users/25.json',  :user  => { 
+           response =RestClient.put 'http://Sr7q3uUpxuxLhsB9Sivx@localhost:8888/api/users/25.json',  :user  => { 
                                                                                                              :email                 => 'updateburden@dog.com', 
                                                                                                              :password              => 'dog321', 
                                                                                                              :password_confirmation => 'dog321'
                                                                                                    }
      when "test_loginuser" then
-            response =RestClient.post 'http://G-pg8mRY4D6He8nfcCBt@localhost:3000/api/users/3.json', :email => 'one@dog.com', :password => 'password123', :password_confirmation => 'password123'
+            response =RestClient.post 'http://Sr7q3uUpxuxLhsB9Sivx@localhost:8888/api/users/3.json', :email => 'one@dog.com', :password => 'password123', :password_confirmation => 'password123'
      else 
             print "Pass in either produsers, prodorders, testusers, testorders\n"
             print "Example: ./fetchOrder.rb produsers|prodorders|testusers|testorders\n"
