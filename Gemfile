@@ -19,6 +19,10 @@ gem 'taps'
 gem 'spree_heroku', '1.0.0', :git => 'git://github.com/paxer/spree-heroku.git'
 gem 'aws-s3'
 
+# Spree AddressBook
+#gem 'spree_address_book', :git => 'git://github.com/romul/spree_address_book.git', :branch => 'master'
+gem 'spree_address_book', :path => 'vendor/extensions/spree_address_book'
+
 # To get a specific commit version on spree github use :ref 
 # gem 'spree', :git => 'git://github.com/spree/spree.git', :ref => 'a24b44aed6675866fb0e'
 

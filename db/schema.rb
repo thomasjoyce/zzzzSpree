@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(:version => 20110314192118) do
     t.datetime "updated_at"
     t.string   "state_name"
     t.string   "alternative_phone"
+    t.integer  "user_id"
+    t.datetime "deleted_at"
   end
 
   add_index "addresses", ["firstname"], :name => "index_addresses_on_firstname"
