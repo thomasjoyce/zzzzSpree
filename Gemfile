@@ -67,6 +67,9 @@ end
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
+# For more details, see https://github.com/lwe/simple_enum#readme
+gem 'simple_enum', :git => 'git://github.com/lwe/simple_enum.git'
+
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:

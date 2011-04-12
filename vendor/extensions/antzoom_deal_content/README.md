@@ -1,13 +1,15 @@
-AntzoomDealContent
-==================
+Antzoom Deal Content
+=====================
 
-Introduction goes here.
+This feature shows deals contents for mobile users
 
+Example Usage
+==============
 
-Example
-=======
+ List of deals per store Brand
+ List of deals per Brand
+ Top deals per day
+ Add/Edit/Delete deals to store
+ Add/Edit/Delete deals to brand 
 
-Example goes here.
-
-
-Copyright (c) 2011 [name of extension creator], released under the New BSD License
+Copyright (c) 2011 AntZoom LLC 

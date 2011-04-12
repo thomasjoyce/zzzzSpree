@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110314192118) do
+ActiveRecord::Schema.define(:version => 20110409192100) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -106,6 +106,17 @@ ActiveRecord::Schema.define(:version => 20110314192118) do
     t.integer  "address_id"
     t.string   "gateway_customer_profile_id"
     t.string   "gateway_payment_profile_id"
+  end
+
+  create_table "deals", :force => true do |t|
+    t.integer  "type"
+    t.text     "description",                     :null => false
+    t.boolean  "status",        :default => true
+    t.datetime "expired_at"
+    t.datetime "terminated_at"
+    t.integer  "users_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "gateways", :force => true do |t|

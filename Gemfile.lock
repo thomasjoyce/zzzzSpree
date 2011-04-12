@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/lwe/simple_enum.git
+  revision: 350e380cac57dfb6b3fb6fd6ceee522d2cb18cb4
+  specs:
+    simple_enum (1.3.2)
+
+GIT
   remote: git://github.com/paxer/spree-heroku.git
   revision: 6fe1afec57545d4fc5e2053ce39cc2afe84fcf77
   specs:
@@ -232,6 +238,7 @@ DEPENDENCIES
   passenger (= 3.0.5)
   pg
   rails (= 3.0.5)
+  simple_enum!
   spree (= 0.50.99)!
   spree_address_book!
   spree_api (= 0.50.99)!
