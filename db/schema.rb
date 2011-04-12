@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110411172153) do
+ActiveRecord::Schema.define(:version => 20110412142832) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -109,7 +109,7 @@ ActiveRecord::Schema.define(:version => 20110411172153) do
   end
 
   create_table "deals", :force => true do |t|
-    t.integer  "type"
+    t.integer  "category_type"
     t.text     "description",                     :null => false
     t.boolean  "status",        :default => true
     t.datetime "expired_at"
