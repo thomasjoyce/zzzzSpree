@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110412142832) do
+ActiveRecord::Schema.define(:version => 20110412174019) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -65,6 +65,13 @@ ActiveRecord::Schema.define(:version => 20110412142832) do
 
   add_index "assets", ["viewable_id"], :name => "index_assets_on_viewable_id"
   add_index "assets", ["viewable_type", "type"], :name => "index_assets_on_viewable_type_and_type"
+
+  create_table "brands", :force => true do |t|
+    t.string   "name",       :null => false
+    t.integer  "deal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "calculators", :force => true do |t|
     t.string   "type"
@@ -458,6 +465,15 @@ ActiveRecord::Schema.define(:version => 20110412142832) do
     t.string  "name"
     t.string  "abbr"
     t.integer "country_id"
+  end
+
+  create_table "stores", :force => true do |t|
+    t.string   "name",       :null => false
+    t.integer  "brand_id"
+    t.integer  "deal_id"
+    t.integer  "address_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tax_categories", :force => true do |t|
