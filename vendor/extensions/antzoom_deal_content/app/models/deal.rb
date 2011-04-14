@@ -4,8 +4,8 @@ class Deal < ActiveRecord::Base
   #validates_as_enum :category_type
   
   belongs_to :user
-  #belongs_to :brand
-  #belongs_to :store
+  belongs_to :brand
+  belongs_to :store
   #has_many :comments
 
 

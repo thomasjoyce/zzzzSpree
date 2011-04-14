@@ -43,8 +43,6 @@ class DealsController < Spree::BaseController
   def create
     @deal = Deal.new(params[:deal])
     
-    #@deal.category_type = :freebie
-
     respond_to do |format|
       if @deal.save
         format.html { redirect_to(@deal, :notice => 'Deal was successfully created.') }
