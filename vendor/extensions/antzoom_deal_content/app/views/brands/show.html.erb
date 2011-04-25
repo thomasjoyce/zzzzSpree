@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @brand.name %>
+</p>
+
+<p>
+  <b>Deals:</b>
+  <%= @brand.deals %>
+</p>
+
+
+<% @brand.deals.each do |deal| %>
+<p>
+      <td>ID:<%= deal.id %></td>
+      <td>DESCR:<%= deal.description %></td> 
+     
+</p>
+<% end %>
+
+<%= link_to 'New Deal', new_brand_deal_path(@brand, @deal) %>
+
+<%= link_to 'Edit', edit_brand_path(@brand) %> |
+<%= link_to 'Back', brands_path %>
+
+
+

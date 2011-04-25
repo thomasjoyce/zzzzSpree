@@ -1,6 +1,49 @@
 <h1>Editing deal</h1>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @deal %> |
-<%= link_to 'Back', deals_path %>
+<%= form_for [@brand, @deal] do |f| %>
+
+<% if @deal.errors.any? %>
+   <div id="error_explanation">
+     <h2><%= pluralize(@deal.errors.count, "error") %> prohibited this deal from being saved:</h2>
+
+     <ul>
+     <% @deal.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+     <% end %>
+     </ul>
+   </div>
+ <% end %>
+
+<div class="field">
+   <%= f.label :category_type %><br />
+   <%= select("deal", "category_type", Deal.category_types_for_select) %>
+ </div>
+
+ <div class="field">
+   <%= f.label :description %><br />
+   <%= f.text_area :description %>
+ </div>
+ <div class="field">
+   <%= f.label :status %><br />
+   <%= f.check_box :status %>
+ </div>
+ <div class="field">
+   <%= f.label :expired_at %><br />
+   <%= f.datetime_select :expired_at %>
+ </div>
+ <div class="field">
+   <%= f.label :terminated_at %><br />
+   <%= f.datetime_select :terminated_at %>
+ </div>
+
+<%= f.hidden_field :brand_id, { :value => @deal.brand_id } %>
+<%= f.hidden_field :user_id,  { :value => current_user.id } %>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

@@ -4,7 +4,7 @@
   <b>Type:</b>
   <%= @deal.category_type %>
 </p>
-
+ 
 <p>
   <b>Description:</b>
   <%= @deal.description %>
@@ -27,9 +27,14 @@
 
 <p>
   <b>User:</b>
-  <%= @deal.user.id %>
+  <%= @deal.user_id %>
 </p>
 
+<p>
+  <b>Brand_ID:</b>
+  <%= @deal.brand_id %>
+</p>
 
-<%= link_to 'Edit', edit_deal_path(@deal) %> |
-<%= link_to 'Back', deals_path %>
+<%= link_to 'Edit', edit_brand_deal_path(@brand, @deal) %> |
+<%= link_to 'Back', brand_deals_url %>
+

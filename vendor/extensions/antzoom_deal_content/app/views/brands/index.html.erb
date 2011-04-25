@@ -1,0 +1,25 @@
+<h1>Listing Deals By Brands:</h1>
+
+<table>
+  <tr>
+    <th>Brand_ID</th>
+    <th>Brand_Name</th>
+  </tr>
+
+<% @brands.each do |brand| %>
+  <tr>
+    <td><%= brand.id %></td>
+    <td><%= brand.name %></td>
+
+
+    <td><%= link_to 'Show', brand %></td>
+    <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
+    <td><%= link_to 'Destroy', brand , :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New Brand Deal', new_brand_path %>
+
+<br />
+

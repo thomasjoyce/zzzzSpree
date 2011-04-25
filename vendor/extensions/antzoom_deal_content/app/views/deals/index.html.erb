@@ -23,13 +23,16 @@
     <td><%= deal.expired_at %></td>
     <td><%= deal.terminated_at %></td>
     <td><%= deal.user_id %></td>
-    <td><%= link_to 'Show', deal %></td>
-    <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
-    <td><%= link_to 'Destroy', deal, :confirm => 'Are you sure?', :method => :delete %></td>
+   
+	<td><%= link_to 'Show', brand_deal_path(@brand, deal) %></td>
+	<td><%= link_to 'Edit', edit_brand_deal_path(@brand, deal) %></td>
+	<td><%= link_to 'Destroy', [@brand, deal],  :method => :delete, :confirm => 'Are you sure?' %></td>
+
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Deal', new_deal_path %>
+
+<%= link_to 'New Deal', new_brand_deal_path(@brand) %>
